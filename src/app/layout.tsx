@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/tailwind.css";
 import { quicksand } from "@/fonts";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: {
@@ -14,15 +15,11 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${quicksand.className} ${quicksand.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${quicksand.className} ${quicksand.variable} antialiased`}>{children}</body>
     </html>
   );
 }
