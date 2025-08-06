@@ -1,7 +1,7 @@
+import { inter, quicksand } from "@/fonts";
 import type { Metadata } from "next";
-import "../styles/tailwind.css";
-import { quicksand } from "@/fonts";
 import { ReactNode } from "react";
+import "../styles/tailwind.css";
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} ${quicksand.variable} antialiased`}>{children}</body>
+      <body className={`${inter.className} ${inter.variable} ${quicksand.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

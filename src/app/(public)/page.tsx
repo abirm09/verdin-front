@@ -5,11 +5,7 @@ export const metadata: Metadata = {
 };
 
 const HomePage = () => {
-  return (
-    <div>
-      <h2 className="text-center font-bold">Welcome to verdin</h2>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default HomePage;
