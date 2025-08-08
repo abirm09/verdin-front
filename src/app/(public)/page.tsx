@@ -1,3 +1,4 @@
+import { WhatWeOffer } from "@/components";
 import { Banner } from "@/features/home";
 import { Metadata } from "next";
 
@@ -9,6 +10,7 @@ const HomePage = () => {
   return (
     <main>
       <Banner />
+      <WhatWeOffer />
     </main>
   );
 };
