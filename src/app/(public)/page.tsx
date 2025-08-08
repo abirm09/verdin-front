@@ -1,3 +1,4 @@
+import { Banner } from "@/features/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,7 +6,11 @@ export const metadata: Metadata = {
 };
 
 const HomePage = () => {
-  return <div></div>;
+  return (
+    <main>
+      <Banner />
+    </main>
+  );
 };
 
 export default HomePage;
