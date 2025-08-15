@@ -9,6 +9,52 @@ import { useEffect, useState } from "react";
 import ActiveLink from "./ActiveLink";
 import { TNavLinks } from "./Header";
 
+export type TCategory = {
+  id: string;
+  name: string;
+  slug: string;
+  image: string;
+};
+
+export const categories: TCategory[] = [
+  {
+    id: "1",
+    name: "Plant Growing Kits",
+    slug: "plant-growing-kits",
+    image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/fertilizer_rlj7sb.png",
+  },
+  {
+    id: "2",
+    name: "Seeds & Bulbs",
+    slug: "seeds-&-bulbs",
+    image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/seed-bag_zesbdo.png",
+  },
+  {
+    id: "3",
+    name: "Planters & Pots",
+    slug: "planters-&-pots",
+    image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/planter_rqaxsp.png",
+  },
+  {
+    id: "4",
+    name: "Grow Lights",
+    slug: "grow-lights-&-environment",
+    image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/lightbulb_xf9o4h.png",
+  },
+  {
+    id: "5",
+    name: "Tools",
+    slug: "tools",
+    image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413518/settings_lujyft.png",
+  },
+  {
+    id: "6",
+    name: "Gadgets",
+    slug: "gadgets",
+    image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754661615/gadget_qebpvt.png",
+  },
+];
+
 const MainHeader = ({ navLinks }: { navLinks: TNavLinks[] }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -26,45 +72,6 @@ const MainHeader = ({ navLinks }: { navLinks: TNavLinks[] }) => {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const categories = [
-    {
-      id: "1",
-      name: "Plant Growing Kits",
-      slug: "plant-growing-kits",
-      image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/fertilizer_rlj7sb.png",
-    },
-    {
-      id: "2",
-      name: "Seeds & Bulbs",
-      slug: "seeds-&-bulbs",
-      image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/seed-bag_zesbdo.png",
-    },
-    {
-      id: "3",
-      name: "Planters & Pots",
-      slug: "planters-&-pots",
-      image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/planter_rqaxsp.png",
-    },
-    {
-      id: "4",
-      name: "Grow Lights & Environment",
-      slug: "grow-lights-&-environment",
-      image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413517/lightbulb_xf9o4h.png",
-    },
-    {
-      id: "5",
-      name: "Tools & Accessories",
-      slug: "tools-&-accessories",
-      image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413518/settings_lujyft.png",
-    },
-    {
-      id: "6",
-      name: "Tools & Accessories",
-      slug: "tools-&-accessories",
-      image: "https://res.cloudinary.com/djb6gdw6k/image/upload/v1754413518/settings_lujyft.png",
-    },
-  ];
 
   return (
     <>

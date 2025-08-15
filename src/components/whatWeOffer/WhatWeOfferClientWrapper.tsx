@@ -36,7 +36,7 @@ const WhatWeOfferClientWrapper = ({
               </div>
               <div className="col-span-2">
                 <Title className="text-primary">{item?.title}</Title>
-                <Subtitle>{item?.subtitle}</Subtitle>
+                <Subtitle className="text-xs">{item?.subtitle}</Subtitle>
               </div>
             </div>
           </CarouselItem>
