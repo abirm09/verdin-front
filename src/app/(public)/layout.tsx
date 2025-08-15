@@ -1,4 +1,5 @@
 import { Header } from "@/features/shared";
+import Footer from "@/features/shared/footer/Footer";
 import { ReactNode } from "react";
 
 const layout = ({ children }: { children: ReactNode }) => {
@@ -6,6 +7,7 @@ const layout = ({ children }: { children: ReactNode }) => {
     <>
       <Header />
       {children}
+      <Footer />
     </>
   );
 };
