@@ -35,7 +35,7 @@ const WhatWeOfferClientWrapper = ({
                 />
               </div>
               <div className="col-span-2">
-                <Title className="text-primary">{item?.title}</Title>
+                <Title className="text-primary md:text-base">{item?.title}</Title>
                 <Subtitle className="text-xs">{item?.subtitle}</Subtitle>
               </div>
             </div>
