@@ -131,7 +131,7 @@ const MainHeader = ({ navLinks }: { navLinks: TNavLinks[] }) => {
         </Container>
       </div>
       <div
-        className={`fixed right-5 md:right-10 transition-all duration-300 ${isScrolled ? "bottom-5 md:bottom-10 opacity-100" : "-bottom-9 opacity-0"}`}
+        className={`fixed right-5 md:right-10 transition-all duration-300 ${isScrolled ? "bottom-5 md:bottom-10 opacity-100" : "-bottom-9 opacity-0"} z-50`}
       >
         <Button onClick={scrollToTop}>
           <ChevronUp />

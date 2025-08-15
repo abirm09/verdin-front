@@ -1,5 +1,5 @@
 import { WhatWeOffer } from "@/components";
-import { Banner, BestSellingProducts, NewArrivals } from "@/features/home";
+import { Banner, BestSellingProducts, HighlightedProduct, NewArrivals } from "@/features/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +13,7 @@ const HomePage = () => {
       <WhatWeOffer />
       <BestSellingProducts />
       <NewArrivals />
+      <HighlightedProduct />
     </main>
   );
 };

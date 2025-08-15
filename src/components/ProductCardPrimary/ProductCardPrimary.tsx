@@ -11,17 +11,23 @@ import {
   CardTitle,
 } from "@/components/ui";
 import flattenCategories from "@/lib/flatCategories";
+import { cn } from "@/lib/utils";
 import { Eye, GitCompare, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import ProductCardPrimaryClientWrapper from "./ProductCardPrimaryClientWrapper";
 
-const ProductCardPrimary = ({ product }: { product: TProduct }) => {
+const ProductCardPrimary = ({ product, className }: { product: TProduct; className?: string }) => {
   const categories = flattenCategories(product?.categories);
 
   return (
     <>
-      <Card className="relative w-[166px] sm:w-[300px] gap-2 py-3 group sm:overflow-hidden">
+      <Card
+        className={cn(
+          "relative w-[166px] sm:w-[300px] gap-2 py-3 group sm:overflow-hidden",
+          className,
+        )}
+      >
         <CardHeader>
           <Image
             src={product?.image?.url}
