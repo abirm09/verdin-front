@@ -1,11 +1,12 @@
-import { Container, ProductCardPrimary, Subtitle, Title } from "@/components";
+import { Container, ProductCardPrimary, Subtitle } from "@/components";
+import SectionTitle from "@/components/SectionTitle";
 import { fakeProduct } from "@/data/products";
 
 const BestSellingProducts = () => {
   return (
     <section className="pt-10 md:pt-20">
       <Container>
-        <Title className="text-center">Best selling products</Title>
+        <SectionTitle className="text-center">Best selling products</SectionTitle>
         <Subtitle className="text-center">Check out our most popular picks</Subtitle>
         {/* Product lists */}
 
