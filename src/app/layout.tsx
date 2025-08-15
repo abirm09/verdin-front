@@ -1,6 +1,8 @@
+import { inter, quicksand } from "@/fonts";
 import type { Metadata } from "next";
+import { ReactNode } from "react";
+import { Toaster } from "sonner";
 import "../styles/tailwind.css";
-import { quicksand } from "@/fonts";
 
 export const metadata: Metadata = {
   title: {
@@ -14,14 +16,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${quicksand.className} ${quicksand.variable} antialiased`}
-      >
+      <body className={`${inter.className} ${inter.variable} ${quicksand.variable} antialiased`}>
         {children}
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );

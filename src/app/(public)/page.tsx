@@ -1,3 +1,5 @@
+import { NewsLetter, WhatWeOffer } from "@/components";
+import { Banner, BestSellingProducts, HighlightedProduct, NewArrivals } from "@/features/home";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,9 +8,14 @@ export const metadata: Metadata = {
 
 const HomePage = () => {
   return (
-    <div>
-      <h2 className="text-center font-bold">Welcome to verdin</h2>
-    </div>
+    <main>
+      <Banner />
+      <WhatWeOffer />
+      <BestSellingProducts />
+      <NewArrivals />
+      <HighlightedProduct />
+      <NewsLetter />
+    </main>
   );
 };
 
