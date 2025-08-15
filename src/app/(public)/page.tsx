@@ -1,4 +1,4 @@
-import { WhatWeOffer } from "@/components";
+import { NewsLetter, WhatWeOffer } from "@/components";
 import { Banner, BestSellingProducts, HighlightedProduct, NewArrivals } from "@/features/home";
 import { Metadata } from "next";
 
@@ -14,6 +14,7 @@ const HomePage = () => {
       <BestSellingProducts />
       <NewArrivals />
       <HighlightedProduct />
+      <NewsLetter />
     </main>
   );
 };
